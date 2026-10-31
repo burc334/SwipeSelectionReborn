@@ -1,0 +1,14 @@
+Package: com.burc334.swipeselectionreborn
+Name: SwipeSelection Reborn
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Swipe the keyboard to move the cursor and select text. A modern iOS 16+ rebuild with trackpad-style keyboard dimming, haptics, and a single-page settings pane.
+Depiction: https://burc334.github.io/SwipeSelectionReborn/
+SileoDepiction: https://burc334.github.io/SwipeSelectionReborn/depiction.json
+Maintainer: burc334
+Author: burc334
+Section: Tweaks
+Depends: mobilesubstrate, firmware (>= 16.0)
+Conflicts: com.icraze.swipeselection, com.iky1e.swipeselection, com.burc334.swipeselectionx
+Replaces: com.burc334.swipeselectionx
+Icon: file:///var/jb/Library/PreferenceBundles/SwipeSelectionRebornPrefs.bundle/PackageIcon.png
