@@ -3,3 +3,6 @@ packages/
 build*.log
 *.deb
 .DS_Store
+builds/
+*.log
+*.dSYM

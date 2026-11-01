@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1024" height="1024" role="img" aria-label="SwipeSelection Reborn icon">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5B3DF5"/>
+      <stop offset="1" stop-color="#1FB6F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <rect x="120" y="190" width="272" height="132" rx="22" fill="#FFFFFF" fill-opacity="0.26"/>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 140V322M392 190V372" stroke-width="16"/>
+    <path d="M178 236L214 256L178 276" stroke-width="18" stroke-opacity="0.45"/>
+    <path d="M240 236L276 256L240 276" stroke-width="18" stroke-opacity="0.72"/>
+    <path d="M302 236L338 256L302 276" stroke-width="18"/>
+  </g>
+  <circle cx="120" cy="140" r="30" fill="#FFFFFF"/>
+  <circle cx="392" cy="372" r="30" fill="#FFFFFF"/>
+</svg>
