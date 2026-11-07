@@ -10,11 +10,10 @@
 @end
 
 static NSString *const SSDefaultsDomain = @"com.burc334.swipeselectionreborn";
-static CFStringRef const SSPreferencesChangedNotification = CFSTR("com.burc334.swipeselectionreborn/preferencesChanged");
 
 static void SSPostPreferencesChanged(void) {
     CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),
-                                         SSPreferencesChangedNotification,
+                                         (__bridge CFStringRef)SSPreferencesChangedNotification,
                                          NULL,
                                          NULL,
                                          YES);
@@ -195,7 +194,7 @@ static void SSPostPreferencesChanged(void) {
         [specifiers addObject:spaceShiftDeleteOnly];
 
         PSSpecifier *about = [PSSpecifier groupSpecifierWithName:@"About"];
-        [about setProperty:@"SwipeSelection Reborn 1.0.0\nOriginal SwipeSelection by Kyle Howells.\nMaintained by burc334."
+        [about setProperty:@"SwipeSelection Reborn 1.0.1\nOriginal SwipeSelection by Kyle Howells.\nMaintained by burc334."
                      forKey:PSFooterTextGroupKey];
         [specifiers addObject:about];
 

@@ -1,138 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#5B3DF5">
-  <meta name="description" content="SwipeSelection Reborn is a rootless jailbreak tweak that brings swipe-to-move-caret and Shift/Delete selection to the iOS keyboard.">
-  <meta property="og:title" content="SwipeSelection Reborn">
-  <meta property="og:description" content="Swipe the keyboard to move the caret and select text on iOS 16+.">
-  <meta property="og:image" content="https://burc334.github.io/SwipeSelectionReborn/icon.png?v=1.0.0">
-  <meta property="og:type" content="website">
-  <title>SwipeSelection Reborn</title>
-  <link rel="icon" href="icon.png?v=1.0.0">
-  <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#5B3DF5" name="theme-color"/>
+<meta content="Swipe the keyboard to move the caret and select text." name="description"/>
+<meta content="SwipeSelection Reborn — rootless jailbreak tweak" property="og:title"/>
+<meta content="Swipe the keyboard to move the caret and select text." property="og:description"/>
+<meta content="https://burc334.github.io/SwipeSelectionReborn/icon.png?v=1.0.1" property="og:image"/>
+<meta content="website" property="og:type"/>
+<title>SwipeSelection Reborn — rootless jailbreak tweak</title>
+<link href="icon.png?v=1.0.1" rel="icon"/>
+<link href="style.css?v=2eee5bc0" rel="stylesheet"/>
+<meta content="https://burc334.github.io/SwipeSelectionReborn/" property="og:url"/></head>
 <body>
-  <main class="page">
-    <header class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Rootless + RootHide</p>
-        <h1>SwipeSelection Reborn</h1>
-        <p class="summary">Swipe the keyboard to move the caret and swipe from Shift or Delete to select text. Built for iOS 16+.</p>
-        <div class="actions">
-          <a class="button" href="https://github.com/burc334/SwipeSelectionReborn/releases/latest">Download release</a>
-          <a class="button secondary" href="https://github.com/burc334/SwipeSelectionReborn">View source</a>
-        </div>
-        <div class="meta">
-          <span>Version 1.0.0</span>
-          <span><code>com.burc334.swipeselectionreborn</code></span>
-          <span>MIT</span>
-        </div>
-      </div>
-      <img class="hero-icon" src="icon.png?v=1.0.0" width="112" height="112" alt="SwipeSelection Reborn icon">
-    </header>
-
-    <section class="card">
-      <h2>Compatibility</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Build</th>
-            <th>Architecture</th>
-            <th>Compatibility</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>RootHide</td>
-            <td><code>iphoneos-arm64e</code></td>
-            <td>Tested on iOS 16 and iOS 18</td>
-          </tr>
-          <tr>
-            <td>Rootless</td>
-            <td><code>iphoneos-arm64</code></td>
-            <td>iOS 16+; not independently tested</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="note">Tested on iOS 16 (palera1n, RootHide) and iOS 18 (Dopamine 3, RootHide).</p>
-    </section>
-
-    <section class="card">
-      <h2>Highlights</h2>
-      <ul>
-        <li>Swipe left or right to move the cursor.</li>
-        <li>Swipe from Shift or Delete to select text.</li>
-        <li>Optional Space, Shift &amp; Delete-only activation mode.</li>
-        <li>Optional haptic feedback.</li>
-        <li>Adjustable cursor speed.</li>
-        <li>Native keyboard fade while swiping.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Activation mode</h2>
-      <p>When <strong>Space, Shift &amp; Delete Only</strong> is enabled, only swipes starting on those keys control SwipeSelection. Other key swipes follow your existing Apple Slide to Type setting. SwipeSelection does not change that setting.</p>
-    </section>
-
-    <section class="card">
-      <h2>Settings</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Setting</th>
-            <th>Default</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Enabled</td><td>On</td></tr>
-          <tr><td>Haptic feedback</td><td>On, Light</td></tr>
-          <tr><td>Cursor speed</td><td>1.00</td></tr>
-          <tr><td>Dim keyboard</td><td>On</td></tr>
-          <tr><td>Space, Shift &amp; Delete Only</td><td>Off</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="card">
-      <h2>Install</h2>
-      <ol>
-        <li>Download the matching deb:
-          <ul>
-            <li>RootHide: <code>iphoneos-arm64e</code></li>
-            <li>Rootless: <code>iphoneos-arm64</code></li>
-          </ul>
-        </li>
-        <li>Install with Sileo, Zebra, or Filza.</li>
-        <li>Respring if the Settings pane or keyboard does not reload automatically.</li>
-      </ol>
-    </section>
-
-    <section class="card">
-      <h2>Verification</h2>
-      <p>SHA-256 checksums are published in <code>SHA256SUMS.txt</code> with the GitHub release.</p>
-    </section>
-
-    <section class="card">
-      <h2>Support</h2>
-      <p>Open an issue on <a href="https://github.com/burc334/SwipeSelectionReborn/issues">GitHub</a>. Include your iOS version, jailbreak, device model, and SwipeSelection Reborn version.</p>
-    </section>
-
-    <section class="card">
-      <h2>Credits</h2>
-      <p>Original SwipeSelection by Kyle Howells. SwipeSelection 2.0 rebuild by iCraze. SwipeSelection Reborn maintained by burc334.</p>
-    </section>
-
-    <section class="card">
-      <h2>License</h2>
-      <p>MIT</p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>SwipeSelection Reborn · Rootless + RootHide</p>
-  </footer>
+<main class="page">
+<header class="hero">
+<div class="hero-copy">
+<p class="eyebrow">rootless + roothide</p>
+<h1>SwipeSelection Reborn</h1>
+<p class="summary">Swipe the keyboard to move the caret and select text.</p>
+<div class="actions"><a class="button secondary" href="https://github.com/burc334/SwipeSelectionReborn">View source on GitHub</a></div>
+<div class="meta">
+<span>Version 1.0.1</span>
+<span>MIT</span>
+</div>
+</div>
+<img alt="" class="hero-icon" height="112" src="icon.png?v=1.0.1" width="112"/>
+</header>
+<section class="card">
+<h2>Compatibility</h2>
+<table>
+<thead>
+<tr>
+<th scope="col">Build</th>
+<th scope="col">Architecture</th>
+<th scope="col">Compatibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>roothide</td>
+<td><code>iphoneos-arm64e</code></td>
+<td>Tested on iOS 16 and iOS 18</td>
+</tr>
+<tr>
+<td>rootless</td>
+<td><code>iphoneos-arm64</code></td>
+<td>iOS 16+; not independently tested</td>
+</tr>
+</tbody>
+</table>
+<p class="note">Tested on iOS 16 (palera1n, roothide) and iOS 18 (Dopamine 3, roothide).</p>
+</section>
+<section class="card">
+<h2>Highlights</h2>
+<ul>
+<li>Swipe left or right to move the cursor.</li>
+<li>Swipe from Shift or Delete to select text.</li>
+<li>Optional Space, Shift &amp; Delete-only activation mode.</li>
+<li>Optional haptic feedback.</li>
+<li>Adjustable cursor speed.</li>
+<li>Native keyboard fade while swiping.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Activation mode</h2>
+<p>When <strong>Space, Shift &amp; Delete Only</strong> is enabled, only swipes starting on those keys control SwipeSelection. Other key swipes follow your existing Apple Slide to Type setting. SwipeSelection does not change that setting.</p>
+</section>
+<section class="card">
+<h2>Settings</h2>
+<table>
+<thead>
+<tr>
+<th scope="col">Setting</th>
+<th scope="col">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Enabled</td><td>On</td></tr>
+<tr><td>Haptic feedback</td><td>On, Light</td></tr>
+<tr><td>Cursor speed</td><td>1.00</td></tr>
+<tr><td>Dim keyboard</td><td>On</td></tr>
+<tr><td>Space, Shift &amp; Delete Only</td><td>Off</td></tr>
+</tbody>
+</table>
+</section>
+<section class="card">
+<h2>Verification</h2>
+<p>SHA-256 checksums are published in <code>SHA256SUMS.txt</code> with the GitHub release.</p>
+</section>
+<section class="card">
+<h2>Support</h2>
+<p>Open an issue on <a href="https://github.com/burc334/SwipeSelectionReborn/issues">GitHub</a>. Include your iOS version, jailbreak, device model, and SwipeSelection Reborn version.</p>
+</section>
+<section class="card">
+<h2>Credits</h2>
+<p>Original SwipeSelection by Kyle Howells. SwipeSelection 2.0 rebuild by iCraze. SwipeSelection Reborn maintained by burc334.</p>
+</section>
+<section class="card">
+<h2>License</h2>
+<p>MIT</p>
+</section>
+</main>
+<footer class="footer">
+<p>SwipeSelection Reborn · rootless + roothide</p>
+</footer>
 </body>
 </html>

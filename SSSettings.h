@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+FOUNDATION_EXPORT NSString *const SSPreferencesChangedNotification;
+
 typedef NS_ENUM(NSInteger, SSHapticStyle) {
     SSHapticStyleOff = 0,
     SSHapticStyleLight = 1,

@@ -1,2 +1,2 @@
-d4c5a4aba566330dd1c32f3f4ec1ddccc4f5a304bc37f6a42c9eba26afeeb3e4  com.burc334.swipeselectionreborn_1.0.0_iphoneos-arm64.deb
-ac540b08305060f4bb9324765dd55ffc4850bbfce3d434e00cb65b5f11176fe4  com.burc334.swipeselectionreborn_1.0.0_iphoneos-arm64e.deb
+af86d05448a3b6ee7829b160b4ce651e3ccb576dc21ce9a79fcc93809e873742  com.burc334.swipeselectionreborn_1.0.1_iphoneos-arm64.deb
+af3b22d770f4ab1441cb9476e5d3a77ece9a71684683e999721f030188eab732  com.burc334.swipeselectionreborn_1.0.1_iphoneos-arm64e.deb

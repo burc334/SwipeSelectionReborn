@@ -89,7 +89,7 @@ static const CGFloat SSSpeedSnapRadius = 0.05;
     CGFloat sliderWidth = MAX(0.0, bounds.size.width - (margin * 2.0) - valueWidth - gap);
 
     _speedSlider.frame = CGRectMake(margin,
-                                    floorf((bounds.size.height - 31.0) / 2.0),
+                                    floor((bounds.size.height - 31.0) / 2.0),
                                     sliderWidth,
                                     31.0);
     _speedValueLabel.frame = CGRectMake(bounds.size.width - margin - valueWidth,
@@ -97,8 +97,8 @@ static const CGFloat SSSpeedSnapRadius = 0.05;
                                         valueWidth,
                                         bounds.size.height);
 
-    _speedCenterTick.frame = CGRectMake(floorf(CGRectGetMidX(_speedSlider.frame)),
-                                        floorf(CGRectGetMidY(_speedSlider.frame) - 7.0),
+    _speedCenterTick.frame = CGRectMake(floor(CGRectGetMidX(_speedSlider.frame)),
+                                        floor(CGRectGetMidY(_speedSlider.frame) - 7.0),
                                         1.0,
                                         14.0);
 }

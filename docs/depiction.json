@@ -10,11 +10,11 @@
         {
           "class": "DepictionHeaderView",
           "title": "SwipeSelection Reborn",
-          "subtitle": "Version 1.0.0"
+          "subtitle": "Version 1.0.1"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Swipe the keyboard to move the caret and swipe from Shift or Delete to select text. Built for iOS 16+."
+          "markdown": "Swipe the keyboard to move the caret and select text."
         },
         {
           "class": "DepictionTableTextView",
@@ -24,22 +24,22 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.0.0"
+          "text": "1.0.1"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "RootHide",
-          "text": "iOS 16+ \u00b7 iphoneos-arm64e"
+          "title": "roothide",
+          "text": "iOS 16+ · iphoneos-arm64e"
         },
         {
           "class": "DepictionTableTextView",
-          "title": "Rootless",
-          "text": "iOS 16+ \u00b7 not independently tested"
+          "title": "rootless",
+          "text": "iOS 16+ · not independently tested"
         },
         {
           "class": "DepictionTableTextView",
           "title": "Tested",
-          "text": "iOS 16 (palera1n, RootHide) and iOS 18 (Dopamine 3, RootHide)"
+          "text": "iOS 16 (palera1n, roothide) and iOS 18 (Dopamine 3, roothide)"
         },
         {
           "class": "DepictionMarkdownView",
@@ -51,11 +51,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### Settings\n\n- Enabled \u2014 On\n- Haptic feedback \u2014 On, Light\n- Cursor speed \u2014 1.00\n- Dim keyboard \u2014 On\n- Space, Shift & Delete Only \u2014 Off"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "### Install\n\n1. Download the matching deb: RootHide (`iphoneos-arm64e`) or Rootless (`iphoneos-arm64`).\n2. Install with Sileo, Zebra, or Filza.\n3. Respring if the Settings pane or keyboard does not reload automatically."
+          "markdown": "### Settings\n\n- Enabled — On\n- Haptic feedback — On, Light\n- Cursor speed — 1.00\n- Dim keyboard — On\n- Space, Shift & Delete Only — Off"
         },
         {
           "class": "DepictionMarkdownView",
@@ -69,6 +65,12 @@
           "class": "DepictionTableTextView",
           "title": "License",
           "text": "MIT"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View source on GitHub",
+          "action": "https://github.com/burc334/SwipeSelectionReborn",
+          "openExternal": true
         }
       ]
     },
@@ -78,7 +80,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### 1.0.0\n\n- Initial release.\n- Swipe cursor movement and Shift/Delete selection.\n- Native keyboard fade.\n- Activation mode, haptics, and adjustable cursor speed.\n- Rootless and RootHide packages."
+          "markdown": "### 1.0.1\n\n- Internal cleanup only; no user-facing behavior changes.\n\n### 1.0.0\n\n- Initial release.\n- Swipe cursor movement and Shift/Delete selection.\n- Native keyboard fade.\n- Activation mode, haptics, and adjustable cursor speed.\n- rootless and roothide packages."
         }
       ]
     }

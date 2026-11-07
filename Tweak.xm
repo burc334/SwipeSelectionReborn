@@ -213,6 +213,12 @@ static void SSPreferencesChanged(CFNotificationCenterRef center,
                                  CFStringRef name,
                                  const void *object,
                                  CFDictionaryRef userInfo) {
+    (void)center;
+    (void)observer;
+    (void)name;
+    (void)object;
+    (void)userInfo;
+
     UIKeyboardImpl *keyboard = [UIKeyboardImpl activeInstance];
     if (!keyboard) {
         return;
@@ -597,7 +603,7 @@ static void SSInstallGestures(UIKeyboardImpl *keyboard) {
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(),
                                     NULL,
                                     SSPreferencesChanged,
-                                    CFSTR("com.burc334.swipeselectionreborn/preferencesChanged"),
+                                    (__bridge CFStringRef)SSPreferencesChangedNotification,
                                     NULL,
                                     CFNotificationSuspensionBehaviorCoalesce);
 }

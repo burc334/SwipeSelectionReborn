@@ -6,6 +6,8 @@ static NSString *const SSSettingsDomain = @"com.burc334.swipeselectionreborn";
 static NSString *const SSMobileUser = @"mobile";
 static CFStringRef const SSNoContainer = CFSTR("kCFPreferencesNoContainer");
 
+NSString *const SSPreferencesChangedNotification = @"com.burc334.swipeselectionreborn/preferencesChanged";
+
 typedef CFPropertyListRef (*SSCopyValueWithContainerFunc)(CFStringRef key, CFStringRef appID,
                                                             CFStringRef user, CFStringRef host,
                                                             CFStringRef container);
@@ -31,7 +33,8 @@ static void SSLoadPreferencesFunctions(void) {
 
 + (NSUserDefaults *)defaults {
     static NSUserDefaults *defaults = nil;
-    if (!defaults) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         defaults = [[NSUserDefaults alloc] initWithSuiteName:SSSettingsDomain];
         [defaults registerDefaults:@{
             @"Enabled": @YES,
@@ -42,7 +45,7 @@ static void SSLoadPreferencesFunctions(void) {
             @"HapticStyle": @(SSHapticStyleLight),
             @"WelcomeShownVersion": @0
         }];
-    }
+    });
     return defaults;
 }
 

@@ -1,28 +1,30 @@
 :root {
   color-scheme: light dark;
-  --bg: #f5f5f7;
-  --card: #ffffff;
-  --text: #1d1d1f;
-  --muted: #6e6e73;
-  --border: #e3e3e8;
-  --chip: #f0f0f4;
-  --code: #f0f0f4;
-  --accent: #5B3DF5;
-  --accent-2: #1fb6f0;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.04);
+  --bg: #F8F8F9;
+  --card: #FEFEFE;
+  --text: #18171C;
+  --muted: #615E6E;
+  --border: #DCDBE1;
+  --chip: #EDECF3;
+  --code: #EBEAF0;
+  --accent: #5b3df5;
+  --accent-strong: #4C1D95;
+  --accent-soft: #E9E7F3;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.05);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #000000;
-    --card: #1c1c1e;
-    --text: #f5f5f7;
-    --muted: #a1a1a6;
-    --border: #2c2c2e;
-    --chip: #2c2c2e;
-    --code: #2c2c2e;
-    --accent: #1FB6F0;
-    --accent-2: #64d2ff;
+    --bg: #111014;
+    --card: #1B1A1E;
+    --text: #F2F2F3;
+    --muted: #AAA9B2;
+    --border: #302F37;
+    --chip: #26252D;
+    --code: #24222A;
+    --accent: #735AF2;
+    --accent-strong: #CAC4E9;
+    --accent-soft: #211F2E;
     --shadow: none;
   }
 }
@@ -41,6 +43,22 @@ body {
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
   line-height: 1.55;
+}
+
+a {
+  color: var(--accent-strong);
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--accent-strong);
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .page {
@@ -70,7 +88,7 @@ body {
 
 .eyebrow {
   margin: 0;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -100,26 +118,35 @@ h1 {
 
 .button {
   display: inline-block;
-  padding: 9px 14px;
+  padding: 10px 14px;
   border: 1px solid transparent;
   border-radius: 999px;
   background: var(--accent);
   color: #ffffff;
+  font-family: inherit;
   font-size: 0.9rem;
   font-weight: 650;
+  line-height: 1.55;
   text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--accent-strong);
+  color: #ffffff;
 }
 
 .button.secondary {
-  border-color: var(--border);
+  border-color: var(--muted);
   background: var(--card);
   color: var(--text);
 }
 
-.note {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 0.85rem;
+.button.secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .meta {
@@ -142,15 +169,15 @@ h1 {
   margin-bottom: 14px;
   padding: 20px;
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: 16px;
   background: var(--card);
   box-shadow: var(--shadow);
 }
 
 h2 {
   margin: 0 0 10px;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-size: 1.08rem;
+  letter-spacing: -0.015em;
 }
 
 p {
@@ -159,6 +186,12 @@ p {
 
 p + p {
   margin-top: 10px;
+}
+
+.note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 table {
@@ -240,5 +273,54 @@ code {
   th,
   td {
     padding: 7px 8px;
+  }
+
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  h1 {
+    font-size: clamp(1.72rem, 14.3vw - 18.1px, 2.2rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 620px) {
+  table code {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+}
+
+code { overflow-wrap: anywhere; word-break: break-word; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.button:not(.secondary) {
+  background: var(--accent-strong);
+  color: #fff;
+}
+.button:not(.secondary):hover {
+  background: var(--accent);
+  color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  .button:not(.secondary) {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+  }
+  .button:not(.secondary):hover {
+    background: var(--accent);
+    color: #000;
   }
 }
